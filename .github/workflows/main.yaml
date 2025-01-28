@@ -24,12 +24,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python3 -m pip3 install --upgrade pip
-          python3 -m pip3 install -r requirements.txt
+          pip3 install --upgrade pip
+          pip3 install -r requirements.txt
 
       - name: Print debugging information
         run: |
-          echo "Python Version: $(python --version)"
+          echo "Python Version: $(python3 --version)"
           echo "Working Directory: $(pwd)"
           echo "Contents of Working Directory: $(ls -l)"
           echo "Contents of site-packages: $(ls -l venv/lib/python*/site-packages)"
@@ -54,11 +54,11 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python3 -m pip3 install --upgrade pip
-          python3 -m pip3 install -r requirements.txt
+          pip3 install --upgrade pip
+          pip3 install -r requirements.txt
 
       - name: Run tests
-        run: python3 -m unittest discover tests
+        run: python3 -m unittest discover -s tests -p 'test_*.py'
 
   deploy:
     needs: test
