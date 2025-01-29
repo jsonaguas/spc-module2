@@ -3,9 +3,9 @@ info:
   title: "Mechanic Management API"
   description: "This is the API documentation for the Mechanic Management system."
   version: "1.0.0"
-host: "127.0.0.1:5000"
+host: "spc-module2.onrender.com"
 schemes:
-  - "http"
+  - "https"
 consumes:
   - "application/json"
 produces:
